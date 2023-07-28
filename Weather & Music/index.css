@@ -1,0 +1,501 @@
+/* most of css of this page is authored by Lang Gui, 
+except for the APi section, which is writen by Victor */
+
+/* global reset Lang Gui */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  color: #fff;
+}
+
+.weather-app {
+  position: relative;
+}
+
+.hero-section {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.4),
+      rgba(35, 34, 34, 0.4)
+    ),
+    url(img/rainy.jpg);
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* navigation Lang Gui  */
+
+nav {
+  display: flex;
+  align-items: end;
+  font-size: 1.5rem;
+  padding: 5rem 12rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  font-weight: 300;
+}
+
+.tab {
+  text-decoration: none;
+  color: #fff;
+}
+.tab:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.tab:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.brand-logo {
+  font-family: "Lobster", sans-serif;
+  font-size: 2.2rem;
+  padding-right: 4rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* main-weather Lang Gui  */
+.weather-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15rem;
+  position: relative;
+}
+.main-weather-section {
+  /* display: flex;
+  align-items: center;
+  gap: 2rem; */
+  margin-left: 12rem;
+
+  margin-top: 10rem;
+}
+.temp {
+  font-size: 8rem;
+  font-weight: 300;
+}
+.weather-icon {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-city {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-left: 2rem;
+}
+.main-weather {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-left: 2rem;
+}
+.weather-pic {
+  width: 12rem;
+}
+
+/* side-weather section  Lang Gui */
+.side-weather-section {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.side-weather-box {
+  width: 40rem;
+
+  border: rgba(255, 255, 255, 0.057) solid 1px;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.side-city {
+  font-size: 2.8rem;
+  font-weight: 300;
+}
+.side-weather {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.side-temp {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.side-temp-detail {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.top-weather-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.btm-weather-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.background-torronto {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.6),
+      rgba(35, 34, 34, 0.6)
+    ),
+    url(img/city/torronto.jpg);
+  transition: 0.3s ease-out;
+}
+
+.background-torronto:hover {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.3),
+      rgba(35, 34, 34, 0.3)
+    ),
+    url(img/city/torronto.jpg);
+}
+
+.background-vancouver {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.6),
+      rgba(35, 34, 34, 0.6)
+    ),
+    url(img/city/vancouver.jpg);
+}
+
+.background-vancouver:hover {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.3),
+      rgba(35, 34, 34, 0.3)
+    ),
+    url(img/city/vancouver.jpg);
+}
+
+.background-calgary {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.6),
+      rgba(35, 34, 34, 0.6)
+    ),
+    url(img/city/calgary.jpg);
+}
+.background-calgary:hover {
+  background-image: linear-gradient(
+      rgba(36, 35, 35, 0.3),
+      rgba(35, 34, 34, 0.3)
+    ),
+    url(img/city/calgary.jpg);
+}
+/* Victor part */
+
+.active1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 60px;
+  height: 200px;
+}
+#active1 {
+  display: none;
+}
+
+#parentPlayList {
+  justify-content: center;
+  display: flex;
+}
+#parentPlayList2 {
+  justify-content: start;
+  display: flex;
+  margin-left: 4rem;
+}
+
+#welcome {
+  text-align: left;
+  color: black;
+  font-size: 30px;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+#Play,
+#Forward {
+  height: 30px;
+  width: 100px;
+  margin: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+#Play:hover,
+#Forward:hover {
+  color: white;
+  background-color: black;
+}
+#songSection1 {
+  color: white;
+  font-size: 20px;
+  margin: 0px 20px;
+}
+
+#songSection2 {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0px 20px;
+}
+
+#songSection2:hover {
+  color: blueviolet;
+}
+
+/* Victor's code */
+.apiSectiionV {
+  margin-top: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+}
+#city {
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 6px;
+  margin-left: 1rem;
+}
+
+#apiBTN {
+  font-size: 18px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+
+  border: none;
+  background-color: #4e8397;
+
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff4e6;
+  width: 250px;
+  border-radius: 2rem;
+  padding: 1rem 0;
+}
+
+.music-section {
+  color: black;
+}
+
+.step {
+  font-size: 2.4rem;
+  padding: 1rem;
+}
+#apiBTN:hover {
+  background-color: #b39cd0;
+  color: white;
+}
+
+.weatherInfoSection {
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: black;
+  width: 100%;
+}
+
+.weatherInfoSection p {
+  font-size: 20px;
+  margin: 0px 20px;
+}
+.parentPlayList1 {
+  text-align: left;
+}
+.parentPlayList2 {
+  display: flex;
+}
+
+/* feature title Lang Gui  */
+.heading-2 {
+  font-size: 4rem;
+
+  margin-top: 0;
+  position: relative;
+  color: black;
+}
+
+.small-title {
+  text-transform: uppercase;
+  color: #4e8397;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.feature-big-title {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
+}
+
+.brand-in-title {
+  color: #4e8397;
+  font-weight: 500;
+  font-family: "Lobster", sans-serif;
+  font-size: larger;
+}
+
+/* footer */
+
+/* footer section Lang Gui  */
+
+.footer-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  color: #555;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  /* border-top: 1px solid #ddd; */
+  padding: 4rem 18rem;
+  background-color: #fff4e6;
+}
+
+.social-media {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.social-media-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #777;
+  margin-right: 2rem;
+  margin-bottom: 6rem;
+}
+
+.nav-footer {
+  list-style: none;
+}
+.nav-footer > li {
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.contact-info {
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-us {
+  margin-top: 1rem;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: #555;
+}
+
+/* media queries  Lang Gui */
+
+/* below  */
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    height: 125vh;
+  }
+  html {
+    font-size: 50%;
+  }
+
+  nav {
+    padding: 2rem 1rem;
+  }
+
+  /* Adjust the layout for the weather section */
+  .weather-section {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    margin-top: 5rem;
+  }
+  .main-weather-section {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+  .weather-icon {
+    justify-content: center;
+  }
+  .main-weather,
+  .main-city {
+    text-align: center;
+    margin-left: 0;
+  }
+  .temp {
+    font-size: 6rem;
+  }
+
+  .side-weather-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-weather-box {
+    width: 100%;
+  }
+  .top-weather-box,
+  .btm-weather-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-temp-detail {
+    margin-top: 0.5rem;
+  }
+
+  .feature-big-title {
+    margin-top: 6rem;
+  }
+}
+
+/* above */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav {
+    padding: 2rem 6rem;
+  }
+}
+
+/* above */
+@media only screen and (min-width: 1025px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  nav {
+    padding: 5rem 12rem;
+  }
+}

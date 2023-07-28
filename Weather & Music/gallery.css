@@ -1,0 +1,372 @@
+/* the whole page is written by Lang Gui */
+
+/* gallery page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+/* navigation */
+
+nav {
+  display: flex;
+  align-items: end;
+  font-size: 1.5rem;
+  padding: 5rem 12rem;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  font-weight: 300;
+}
+
+.tab {
+  text-decoration: none;
+  color: black;
+}
+.tab:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width 0.3s;
+  color: black;
+}
+
+.tab:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.brand-logo {
+  font-family: "Lobster", sans-serif;
+  font-size: 2.2rem;
+  padding-right: 4rem;
+  text-decoration: none;
+  color: black;
+}
+
+.galleryimages {
+  width: 80rem;
+  height: 40rem;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 3rem;
+}
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.gallerytitle {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.slide-background {
+  width: 90rem;
+  height: 48.5rem;
+  position: absolute;
+  background-color: antiquewhite;
+  z-index: -111;
+  border-radius: 15px;
+}
+.slider-indicator {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: #9c7598;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: white;
+}
+.toggle {
+  position: relative;
+}
+
+.prev {
+  position: absolute;
+  top: 26rem;
+  left: -87rem;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #9c7598;
+  color: white;
+  font-size: large;
+  border-radius: 50%;
+  border: none;
+}
+.next {
+  position: absolute;
+  top: 26rem;
+  left: 2rem;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #9c7598;
+  color: white;
+  font-size: large;
+  border-radius: 50%;
+  border: none;
+}
+
+/* restuarants */
+.container {
+  margin: 7rem 12rem;
+}
+
+.discover-title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.restaurant-card {
+  width: 28rem;
+  height: 37rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(100, 99, 96, 0.3);
+  transition: all 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-1.3rem);
+  box-shadow: 2px 2px 12px rgba(62, 61, 58, 0.1);
+}
+
+.city-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.restaurant-img {
+  width: 28rem;
+  height: 18rem;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 2px 2px 3px rgba(black, black, black, 0.3);
+}
+.restaurant-name {
+  font-size: 2rem;
+  margin: 1rem 1rem;
+}
+.restaurant-intro {
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.discover-section {
+  margin-bottom: 5rem;
+}
+
+.heading-2 {
+  font-size: 4rem;
+
+  margin-top: 0;
+  position: relative;
+  color: black;
+}
+
+.small-title {
+  text-transform: uppercase;
+  color: #4e8397;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.feature-big-title {
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+
+.brand-in-title {
+  color: #4e8397;
+  font-weight: 500;
+  font-family: "Lobster", sans-serif;
+  font-size: larger;
+}
+/* dark mode */
+#dark-mode-button {
+  border: none;
+  background-color: #333;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 35px;
+  cursor: pointer;
+  color: #fff4e6;
+  align-self: end;
+  padding: 0.3rem 1rem;
+  position: relative;
+  top: 0rem;
+  left: 60rem;
+}
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode nav .tab {
+  color: white;
+}
+
+body.dark-mode nav .brand-logo {
+  color: white;
+}
+
+body.dark-mode .feature-big-title .heading-2 {
+  color: white;
+}
+
+body.dark-mode .slider-footer .city-display {
+  color: #333;
+}
+
+.dark-mode-btn.light {
+  background-color: white;
+  color: #333;
+}
+
+/* media query */
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .brand-logo {
+    font-size: 1.8rem;
+  }
+
+  #dark-mode-button {
+    font-size: 1.2rem;
+    left: 13%;
+    transform: translateX(-50%);
+  }
+
+  .galleryimages {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .slide-background {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .discover-title {
+    font-size: 2rem;
+  }
+  .heading-2 {
+    font-size: 2.6rem;
+  }
+
+  .restaurants {
+    gap: 2rem;
+  }
+
+  .restaurant-card {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .restaurant-img {
+    width: 100%;
+    height: 15rem;
+  }
+
+  .restaurant-name {
+    font-size: 1.8rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .restaurant-intro {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  .feature-big-title {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* footer section Lang Gui  */
+
+.footer-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  color: #555;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  /* border-top: 1px solid #ddd; */
+  padding: 4rem 18rem;
+  background-color: #fff4e6;
+}
+
+.social-media {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.social-media-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #777;
+  margin-right: 2rem;
+  margin-bottom: 6rem;
+}
+
+.nav-footer {
+  list-style: none;
+}
+.nav-footer > li {
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.contact-info {
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-us {
+  margin-top: 1rem;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: #555;
+}

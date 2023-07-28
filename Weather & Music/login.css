@@ -1,0 +1,220 @@
+/*  The following code author by Yiqing Song */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+/* navigation */
+
+nav {
+  display: flex;
+  align-items: end;
+  font-size: 1.5rem;
+  padding: 5rem 12rem;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  font-weight: 300;
+}
+
+.tab {
+  text-decoration: none;
+  color: black;
+}
+.tab:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width 0.3s;
+  color: black;
+}
+
+.tab:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.brand-logo {
+  font-family: "Lobster", sans-serif;
+  font-size: 2.2rem;
+  padding-right: 4rem;
+  text-decoration: none;
+  color: black;
+}
+
+.brand-logo-1 {
+  font-family: "Lobster", sans-serif;
+  font-size: 4rem;
+  padding: 4rem 4rem;
+  text-decoration: none;
+  color: black;
+}
+/* main */
+
+form {
+  text-align: left;
+}
+
+form label,
+input {
+  margin: 10px;
+}
+
+form label {
+  color: black;
+  font-weight: 500;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  text-align: center;
+}
+
+label {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+input {
+  width: 90%;
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+
+  border-radius: 6px;
+}
+
+#check {
+  width: 10%;
+}
+
+.login-in-section {
+  width: 60rem;
+  display: grid;
+  justify-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.remember-section {
+  display: flex;
+  align-items: center;
+}
+.sign-up {
+  font-size: 1.4rem;
+  margin-bottom: 8rem;
+}
+#sign-link {
+  text-decoration: none;
+  border: none;
+  background-color: #fff4e6;
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  color: black;
+  align-self: end;
+}
+
+#remember {
+  border: none;
+  background-color: #4e8397;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff4e6;
+  align-self: end;
+  padding: 1rem 0;
+}
+#remember:hover {
+  background-color: #b39cd0;
+  color: white;
+}
+
+/* media query */
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .brand-logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* footer section Lang Gui  */
+
+.footer-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  color: #555;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  /* border-top: 1px solid #ddd; */
+  padding: 4rem 18rem;
+  background-color: #fff4e6;
+}
+
+.social-media {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.social-media-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #777;
+  margin-right: 2rem;
+  margin-bottom: 6rem;
+}
+
+.nav-footer {
+  list-style: none;
+}
+.nav-footer > li {
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.contact-info {
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-us {
+  margin-top: 1rem;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: #555;
+}

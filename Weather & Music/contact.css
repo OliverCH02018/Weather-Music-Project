@@ -1,0 +1,410 @@
+/* the whole page is written by Lang Gui */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+/* navigation */
+
+nav {
+  display: flex;
+  align-items: end;
+  font-size: 1.5rem;
+  padding: 5rem 12rem;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  font-weight: 300;
+}
+
+.tab {
+  text-decoration: none;
+  color: black;
+}
+.tab:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width 0.3s;
+  color: black;
+}
+
+.tab:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.brand-logo {
+  font-family: "Lobster", sans-serif;
+  font-size: 2.2rem;
+  padding-right: 4rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* forms */
+.container-cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 15px;
+  background-color: antiquewhite;
+  max-width: 120rem;
+  margin: 5rem 10rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      rgba(145, 122, 96, 0.4),
+      rgba(98, 92, 85, 0.4)
+    ),
+    url("img/forms.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cta-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.cta-text-box {
+  padding: 3rem 5rem;
+  color: #333;
+}
+.cta-heading {
+  font-size: 3.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+.cta-form input,
+.cta-form select,
+textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-btn {
+  border: none;
+  background-color: #4e8397;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff4e6;
+  align-self: end;
+  padding: 1rem 0;
+}
+
+.cta-btn:hover {
+  background-color: #b39cd0;
+  color: white;
+}
+
+.message {
+  margin-top: 2rem;
+}
+
+textarea {
+  margin-bottom: 2rem;
+}
+
+/* who we are */
+.feature-img {
+  max-width: 80%;
+  /* box-shadow: 12px 12px 15px rgba(35, 34, 34, 0.3); */
+  border-radius: 25px;
+}
+
+.feature-section {
+  max-width: 130rem;
+  margin: 2rem 10rem 10rem 8rem;
+}
+
+.feature-box-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12rem;
+  margin-bottom: 15rem;
+}
+
+.number-heading {
+  font-size: 7rem;
+  color: #4e8397;
+}
+.heading-2 {
+  font-size: 4rem;
+
+  margin-top: 0;
+  position: relative;
+  color: #555;
+}
+
+.heading-3 {
+  font-size: 3rem;
+
+  margin-top: 0;
+  position: relative;
+  color: #555;
+}
+
+.feature-text {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.small-title {
+  text-transform: uppercase;
+  color: #4e8397;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.feature-big-title {
+  margin-top: 6rem;
+  margin-bottom: 7rem;
+}
+
+.brand-in-title {
+  color: #4e8397;
+  font-weight: 500;
+  font-family: "Lobster", sans-serif;
+  font-size: larger;
+}
+
+.number-heading::before {
+  content: " ";
+  width: 4%;
+  padding-bottom: 4%;
+  background-color: #d3ecf7;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+.icon {
+  stroke: #ff9671;
+  width: 5rem;
+  height: 5rem;
+}
+.icon-heading {
+  display: flex;
+
+  align-items: center;
+  gap: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* media query */
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .brand-logo {
+    font-size: 1.8rem;
+  }
+
+  .container-cta {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    max-width: 120rem;
+    margin: 3rem;
+  }
+
+  .cta-img-box {
+    background-image: linear-gradient(
+        rgba(145, 122, 96, 0.4),
+        rgba(98, 92, 85, 0.4)
+      ),
+      url("img/forms.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 50vh;
+  }
+
+  .cta-text-box {
+    padding: 3rem 2rem;
+    color: #333;
+  }
+
+  .cta-heading {
+    font-size: 3.2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .cta-form label {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cta-form input,
+  .cta-form select,
+  textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 6px;
+  }
+
+  .cta-form input::placeholder {
+    color: #aaa;
+  }
+
+  .cta-btn {
+    border: none;
+    background-color: #4e8397;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff4e6;
+    align-self: center;
+    padding: 1rem 0;
+  }
+
+  .feature-box-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+  }
+
+  .number-heading {
+    font-size: 5rem;
+  }
+
+  .heading-2 {
+    font-size: 2.8rem;
+    margin-top: 2rem;
+  }
+
+  .brand-in-title {
+    font-size: 2.8rem;
+  }
+
+  .feature-text {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .icon-heading {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* footer section Lang Gui  */
+
+.footer-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  color: #555;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  /* border-top: 1px solid #ddd; */
+  padding: 4rem 18rem;
+  background-color: #fff4e6;
+}
+
+.social-media {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.social-media-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #777;
+  margin-right: 2rem;
+  margin-bottom: 6rem;
+}
+
+.nav-footer {
+  list-style: none;
+}
+.nav-footer > li {
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.contact-info {
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.contact-us {
+  margin-top: 1rem;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: #555;
+}
